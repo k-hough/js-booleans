@@ -1,0 +1,78 @@
+<!--Write a function that accepts 1 arg. Compare the passed arg to true using the == operator. If the values are equal, return a message saying that particular arg is equal to true. If the values are not equal, return a message saying that particular arg is not equal to true. Call the function multiple times testing these args: 1, 1.0, "1", and "1.0".-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+    "use strict";
+
+    var $ = function(id) { return document.getElementById(id); };
+
+    var isTrue = function(test) {
+        if (test == true) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+
+    var myTest = 1;
+    if (isTrue(myTest)) {
+        $("output").innerHTML = "The argument " + myTest + " is true<br>";
+    }
+    else {
+        $("output").innerHTML = "The argument " + myTest + " is NOT true<br>";
+    }
+
+    myTest = 1.0;
+    if (isTrue(myTest)) {
+        $("output").innerHTML += "The argument " + myTest + " is true<br>";
+    }
+    else {
+        $("output").innerHTML += "The argument " + myTest + " is NOT true<br>";
+    }
+
+    myTest = "1";
+    if (isTrue(myTest)) {
+        $("output").innerHTML += "The argument " + myTest + " is true<br>";
+    }
+    else {
+        $("output").innerHTML += "The argument " + myTest + " is NOT true<br>";
+    }
+
+    myTest = "1.0";
+    if (isTrue(myTest)) {
+        $("output").innerHTML += "The argument " + myTest + " is true<br>";
+    }
+    else {
+        $("output").innerHTML += "The argument " + myTest + " is NOT true<br>";
+    }
+
+    myTest = 5;
+    if (isTrue(myTest)) {
+        $("output").innerHTML += "The argument " + myTest + " is true<br>";
+    }
+    else {
+        $("output").innerHTML += "The argument " + myTest + " is NOT true<br>";
+    }
+
+    myTest = "a";
+    if (isTrue(myTest)) {
+        $("output").innerHTML += "The argument " + myTest + " is true<br>";
+    }
+    else {
+        $("output").innerHTML += "The argument " + myTest + " is NOT true<br>";
+    }
+
+    </script>
+
+</body>
+</html>
