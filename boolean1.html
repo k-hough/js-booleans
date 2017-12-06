@@ -1,0 +1,41 @@
+<!--Write a function that accepts 1 arg. Compare the passed arg to true using the == operator. If the values are equal, return a message saying that particular arg is equal to true. If the values are not equal, return a message saying that particular arg is not equal to true. Call the function multiple times testing these args: 1, 1.0, "1", and "1.0".-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Exercise</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+    "use strict";
+
+    var $ = function(id) { return document.getElementById(id); };
+
+    var test1 = 1;
+    var test2 = 1.0;
+    var test3 = "1";
+    var test4 = "1.0";
+    var test5 = 5;
+    var test6 = "a";
+
+    var isTrue = function(test) {
+        var answer = "";
+        if (test == true) {
+            answer = "The arguement " + test + " is true";
+        }
+        else {
+            answer = "The arguement " + test + " is not true";
+        }
+        return answer;
+    };
+
+    $("output").innerHTML = isTrue(test1) + "<br>" + isTrue(test2) + "<br>" + isTrue(test3) + "<br>" + isTrue(test4) + "<br>" + isTrue(test5) + "<br>" + isTrue(test6);
+
+    </script>
+
+</body>
+</html>
